@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../bin/test.pdb"
   "CMakeFiles/test.dir/DefaultPoller.o"
   "CMakeFiles/test.dir/DefaultPoller.o.d"
+  "CMakeFiles/test.dir/EPollPoller.o"
+  "CMakeFiles/test.dir/EPollPoller.o.d"
   "CMakeFiles/test.dir/EventLoop.o"
   "CMakeFiles/test.dir/EventLoop.o.d"
   "CMakeFiles/test.dir/InetAddress.o"

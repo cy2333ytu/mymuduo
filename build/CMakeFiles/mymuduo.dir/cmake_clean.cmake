@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../lib/libmymuduo.so"
   "CMakeFiles/mymuduo.dir/DefaultPoller.o"
   "CMakeFiles/mymuduo.dir/DefaultPoller.o.d"
+  "CMakeFiles/mymuduo.dir/EPollPoller.o"
+  "CMakeFiles/mymuduo.dir/EPollPoller.o.d"
   "CMakeFiles/mymuduo.dir/EventLoop.o"
   "CMakeFiles/mymuduo.dir/EventLoop.o.d"
   "CMakeFiles/mymuduo.dir/InetAddress.o"
