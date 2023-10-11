@@ -42,7 +42,7 @@
     do \
     { \
         ccy::Logger &logger = ccy::Logger::instance(); \
-        logger.setLogLevel(ccy::LogLevel::INFO); \
+        logger.setLogLevel(ccy::LogLevel::DEBUG); \
         char buf[1024] = {0}; \
         std::snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
         logger.log(buf); \

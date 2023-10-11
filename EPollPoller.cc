@@ -28,11 +28,32 @@ EPollerPoller::~EPollerPoller(){
 
 Timestamp EPollerPoller::poll(int timeoutMs, ChannelList *activateChannels){
 
+    LOG_INFO("func: %s => fd total count:%lu \n", __FUNCTION__,channels_.size());
+    int numEvents = ::epoll_wait(epollfd_, &*events_.begin(), static_cast<int>(events_.size()), timeoutMs);
+    Timestamp now(Timestamp::now());
+
+    int savedErrno = errno;
+    if(numEvents > 0){
+        LOG_INFO("%d events happened \n", numEvents);
+        fillActivateChannels(numEvents, activateChannels);
+        
+        if(numEvents == events_.size()){
+            events_.resize(events_.size() * 2);
+        }else if(numEvents == 0){
+            LOG_DEBUG("%s timeout! \n", __FUNCTION__);
+        }else{
+            if(savedErrno != EINTR){
+                errno = savedErrno;
+                LOG_ERROE("EPollPoller::poll() err");
+            }
+        }
+    }
+    return now;
 }
 
 void EPollerPoller::updateChannel(Channel *channel){
     const int index = channel->index();
-    LOG_INFO("fd = %d events = %d index = %d \n", channel->fd(), channel->events(), index);
+    LOG_INFO("func: %s => fd: %d events: %d index: %d \n", __FUNCTION__, channel->fd(), channel->events(), index);
     
     if(index == kNew || index == kDeleted){
         if(index == kNew){
@@ -57,6 +78,9 @@ void EPollerPoller::removeChannel(Channel *channel){
     int fd = channel->fd();
     channels_.erase(fd);
 
+    LOG_INFO("func: %s => fd: %d\n", __FUNCTION__, fd);
+
+
     int index = channel->index();
     if(index == kAdded){
         update(EPOLL_CTL_DEL, channel);
@@ -65,7 +89,11 @@ void EPollerPoller::removeChannel(Channel *channel){
 }
 
 void EPollerPoller::fillActivateChannels(int numEvents, ChannelList *activateChannels) const{
-
+    for(int i = 0; i<numEvents; i++){
+        Channel *channel = static_cast<Channel*>(events_[i].data.ptr);
+        channel->set_revents(events_[i].events);
+        activateChannels->push_back(channel);
+    }
 }
 
 void EPollerPoller::update(int operation, Channel * channel){
