@@ -1,6 +1,6 @@
 #include"channel.h"
 #include"Logger.h"
-
+#include"EventLoop.h"
 #include<sys/epoll.h>
 
 
@@ -30,11 +30,11 @@ void Channel::tie(const std::shared_ptr<void>& obj){
 }
 
 void Channel::update(){
-
+    loop_->updateChannel(this);
 }
 
 void Channel::remove(){
-
+    loop_->removeChannel(this);
 }
 
 

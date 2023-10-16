@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "../bin/test"
   "../bin/test.pdb"
+  "CMakeFiles/test.dir/CurrentThread.o"
+  "CMakeFiles/test.dir/CurrentThread.o.d"
   "CMakeFiles/test.dir/DefaultPoller.o"
   "CMakeFiles/test.dir/DefaultPoller.o.d"
   "CMakeFiles/test.dir/EPollPoller.o"
