@@ -181,10 +181,24 @@ CMakeFiles/test.dir/TcpServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/TcpServer.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ccy/project/mymuduo/TcpServer.cc -o CMakeFiles/test.dir/TcpServer.s
 
+CMakeFiles/test.dir/Thread.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/Thread.o: ../Thread.cc
+CMakeFiles/test.dir/Thread.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/Thread.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/Thread.o -MF CMakeFiles/test.dir/Thread.o.d -o CMakeFiles/test.dir/Thread.o -c /home/ccy/project/mymuduo/Thread.cc
+
+CMakeFiles/test.dir/Thread.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/Thread.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ccy/project/mymuduo/Thread.cc > CMakeFiles/test.dir/Thread.i
+
+CMakeFiles/test.dir/Thread.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/Thread.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ccy/project/mymuduo/Thread.cc -o CMakeFiles/test.dir/Thread.s
+
 CMakeFiles/test.dir/Timestamp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/Timestamp.o: ../Timestamp.cc
 CMakeFiles/test.dir/Timestamp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/Timestamp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/Timestamp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/Timestamp.o -MF CMakeFiles/test.dir/Timestamp.o.d -o CMakeFiles/test.dir/Timestamp.o -c /home/ccy/project/mymuduo/Timestamp.cc
 
 CMakeFiles/test.dir/Timestamp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/test.dir/Timestamp.s: cmake_force
 CMakeFiles/test.dir/channel.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/channel.o: ../channel.cc
 CMakeFiles/test.dir/channel.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/channel.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/channel.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/channel.o -MF CMakeFiles/test.dir/channel.o.d -o CMakeFiles/test.dir/channel.o -c /home/ccy/project/mymuduo/channel.cc
 
 CMakeFiles/test.dir/channel.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/test.dir/channel.s: cmake_force
 CMakeFiles/test.dir/test.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test.o: ../test.cc
 CMakeFiles/test.dir/test.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/test.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/test.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test.o -MF CMakeFiles/test.dir/test.o.d -o CMakeFiles/test.dir/test.o -c /home/ccy/project/mymuduo/test.cc
 
 CMakeFiles/test.dir/test.i: cmake_force
@@ -233,6 +247,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/Logger.o" \
 "CMakeFiles/test.dir/Poller.o" \
 "CMakeFiles/test.dir/TcpServer.o" \
+"CMakeFiles/test.dir/Thread.o" \
 "CMakeFiles/test.dir/Timestamp.o" \
 "CMakeFiles/test.dir/channel.o" \
 "CMakeFiles/test.dir/test.o"
@@ -248,12 +263,13 @@ test_EXTERNAL_OBJECTS =
 ../bin/test: CMakeFiles/test.dir/Logger.o
 ../bin/test: CMakeFiles/test.dir/Poller.o
 ../bin/test: CMakeFiles/test.dir/TcpServer.o
+../bin/test: CMakeFiles/test.dir/Thread.o
 ../bin/test: CMakeFiles/test.dir/Timestamp.o
 ../bin/test: CMakeFiles/test.dir/channel.o
 ../bin/test: CMakeFiles/test.dir/test.o
 ../bin/test: CMakeFiles/test.dir/build.make
 ../bin/test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ../bin/test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ccy/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ../bin/test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

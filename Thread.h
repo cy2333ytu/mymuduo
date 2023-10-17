@@ -27,8 +27,9 @@ public:
     
     static int numCreated() {return numCreated_;}
     
-
 private:
+    void setDefaultName();
+    
     bool started_;
     bool joined_;
     std::shared_ptr<std::thread> thread_;
