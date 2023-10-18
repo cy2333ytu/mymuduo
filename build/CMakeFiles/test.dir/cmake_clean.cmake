@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/EPollPoller.o.d"
   "CMakeFiles/test.dir/EventLoop.o"
   "CMakeFiles/test.dir/EventLoop.o.d"
+  "CMakeFiles/test.dir/EventLoopThread.o"
+  "CMakeFiles/test.dir/EventLoopThread.o.d"
   "CMakeFiles/test.dir/InetAddress.o"
   "CMakeFiles/test.dir/InetAddress.o.d"
   "CMakeFiles/test.dir/Logger.o"

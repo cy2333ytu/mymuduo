@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mymuduo.dir/EPollPoller.o.d"
   "CMakeFiles/mymuduo.dir/EventLoop.o"
   "CMakeFiles/mymuduo.dir/EventLoop.o.d"
+  "CMakeFiles/mymuduo.dir/EventLoopThread.o"
+  "CMakeFiles/mymuduo.dir/EventLoopThread.o.d"
   "CMakeFiles/mymuduo.dir/InetAddress.o"
   "CMakeFiles/mymuduo.dir/InetAddress.o.d"
   "CMakeFiles/mymuduo.dir/Logger.o"
