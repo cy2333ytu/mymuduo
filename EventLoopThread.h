@@ -1,3 +1,5 @@
+#pragma once
+
 #include"noncopyable.h"
 #include"Thread.h"
 
@@ -10,14 +12,15 @@ namespace ccy{
 
 class EventLoop;
 
-class EvevtLoopThread: noncopyable{
+class EventLoopThread: noncopyable{
 public:
     using ThreadInitCallback = std::function<void(EventLoop*)>;
-    EvevtLoopThread(const ThreadInitCallback &cb = ThreadInitCallback()
+
+    EventLoopThread(const ThreadInitCallback &cb = ThreadInitCallback()
     , const std::string &name = std::string());
 
-    ~EvevtLoopThread();
-    EventLoop* startLop();
+    ~EventLoopThread();
+    EventLoop* startLoop();
 
 private:
     void ThreadFunc();

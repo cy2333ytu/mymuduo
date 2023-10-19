@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/EventLoop.o.d"
   "CMakeFiles/test.dir/EventLoopThread.o"
   "CMakeFiles/test.dir/EventLoopThread.o.d"
+  "CMakeFiles/test.dir/EventLoopThreadPool.o"
+  "CMakeFiles/test.dir/EventLoopThreadPool.o.d"
   "CMakeFiles/test.dir/InetAddress.o"
   "CMakeFiles/test.dir/InetAddress.o.d"
   "CMakeFiles/test.dir/Logger.o"

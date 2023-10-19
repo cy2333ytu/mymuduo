@@ -3,11 +3,11 @@
 
 namespace ccy{
 
-EvevtLoopThread::EvevtLoopThread(const ThreadInitCallback &cb,
+EventLoopThread::EventLoopThread(const ThreadInitCallback &cb,
         const std::string &name)
     : loop_{nullptr}
     , exiting_{false}
-    , thread_(std::bind(&EvevtLoopThread::ThreadFunc, this), name)
+    , thread_(std::bind(&EventLoopThread::ThreadFunc, this), name)
     , mutex_{}
     , cond_{}
     , callback_{cb}
@@ -15,7 +15,7 @@ EvevtLoopThread::EvevtLoopThread(const ThreadInitCallback &cb,
 
 }
 
-EvevtLoopThread::~EvevtLoopThread(){
+EventLoopThread::~EventLoopThread(){
     exiting_ = true;
     if(loop_ != nullptr){
         loop_->quit();
@@ -23,7 +23,7 @@ EvevtLoopThread::~EvevtLoopThread(){
     }
 }
 
-EventLoop* EvevtLoopThread::startLop(){
+EventLoop* EventLoopThread::startLoop(){
     thread_.start();
 
     EventLoop *loop = nullptr;
@@ -38,7 +38,7 @@ EventLoop* EvevtLoopThread::startLop(){
     return loop;
 }
 
-void EvevtLoopThread::ThreadFunc(){
+void EventLoopThread::ThreadFunc(){
     EventLoop loop;                   // create a n eventloop, achieve one loop per thread
     
     if(callback_){
