@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/Logger.o.d"
   "CMakeFiles/test.dir/Poller.o"
   "CMakeFiles/test.dir/Poller.o.d"
+  "CMakeFiles/test.dir/Socket.o"
+  "CMakeFiles/test.dir/Socket.o.d"
   "CMakeFiles/test.dir/TcpServer.o"
   "CMakeFiles/test.dir/TcpServer.o.d"
   "CMakeFiles/test.dir/Thread.o"
