@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "../lib/libmymuduo.pdb"
   "../lib/libmymuduo.so"
+  "CMakeFiles/mymuduo.dir/Acceptor.o"
+  "CMakeFiles/mymuduo.dir/Acceptor.o.d"
   "CMakeFiles/mymuduo.dir/CurrentThread.o"
   "CMakeFiles/mymuduo.dir/CurrentThread.o.d"
   "CMakeFiles/mymuduo.dir/DefaultPoller.o"
