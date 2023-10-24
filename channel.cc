@@ -71,6 +71,12 @@ void Channel::handleEventWithGuard(Timestamp receiveTime){
             readCallback_(receiveTime);
         }
     }
+    if (revents_ & EPOLLOUT){
+        if (writeCallback_)
+        {
+            writeCallback_();
+        }
+    }
 
 }
 
